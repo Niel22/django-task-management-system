@@ -70,6 +70,12 @@ TEMPLATES = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'user_auth.backends.EmailBackend',  
+    'django.contrib.auth.backends.ModelBackend',  
+]
+
+
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
@@ -127,4 +133,4 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-LOGIN_URL = 'login'
+LOGIN_URL = 'loginPage'
